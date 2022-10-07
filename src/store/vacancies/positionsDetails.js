@@ -165,10 +165,12 @@ export const useStorePositionsDetails = defineStore('storePositions', {
   },
   actions: {
     addVacancie(newVacancieContent){
-       let currentDate = new Date().getTime(),
-           id = currentDate.toString()
+      if(!newVacancieContent.id){
+        let currentDate = new Date().getTime(),
+          id = currentDate.toString()
       newVacancieContent.id = id
-       this.positions.push(newVacancieContent)
+      this.positions.push(newVacancieContent)
+      }
     },
     deleteVacancie(vacancieToDelete){
       this.positions.splice(this.positions.indexOf(vacancieToDelete),1)

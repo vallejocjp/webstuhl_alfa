@@ -9,12 +9,14 @@ const routes = [
     {
         path: '/admin',
         name: 'admin',
-        component: () => import( '@/views/admin/Administration.vue' )
-    },
-    {
-        path: '/details/:id',
-        name: 'details',
-        component: () => import( '@/views/public/VacanciesDetails.vue')
+        component: () => import( '@/views/admin/Administration.vue' ),
+        children:[
+            {
+              path: 'vacancies',
+              name: 'vacancies',
+              component: () => import( '@/views/admin/Vacancies.vue' )
+            },
+        ]
     }
 ]
 
