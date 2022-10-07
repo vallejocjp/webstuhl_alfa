@@ -28,7 +28,7 @@
                 </q-item-section>
   
                 <q-item-section>
-                  Star
+                  Opción nueva
                 </q-item-section>
               </q-item>
   
@@ -38,7 +38,7 @@
                 </q-item-section>
   
                 <q-item-section>
-                  Send
+                  Opción nueva
                 </q-item-section>
               </q-item>
   
@@ -48,7 +48,7 @@
                 </q-item-section>
   
                 <q-item-section>
-                  Drafts
+                  Opción nueva
                 </q-item-section>
               </q-item>
             </q-list>
@@ -59,8 +59,8 @@
               <q-avatar size="56px" class="q-mb-sm">
                 <img src="https://cdn.quasar.dev/img/boy-avatar.png">
               </q-avatar>
-              <div class="text-weight-bold">Razvan Stoenescu</div>
-              <div>@rstoenescu</div>
+              <div class="text-weight-bold">Nombre Usuario</div>
+              <div>@nombre</div>
             </div>
           </q-img>
         </q-drawer>

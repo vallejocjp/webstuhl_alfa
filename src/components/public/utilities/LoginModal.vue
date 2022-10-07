@@ -1,10 +1,18 @@
 <script setup>
     import { ref } from 'vue'
+    import { useRouter } from 'vue-router'
     
     const showModal = ref(false)
     const usuario = ref('')
     const password = ref('')
     const isPwd = ref(true)
+    
+    const router = useRouter()
+
+    const LoginMethod = () => {
+      
+        if (usuario.value == 'admin' && password.value == 'admin') return router.push({name: 'admin'})
+    }
      
     </script>
 
@@ -38,7 +46,7 @@
         </q-card-section>
 
         <q-card-actions align="center" class="bg-white q-mb-md">
-          <q-btn label="Enviar" color="primary" v-close-popup />
+          <q-btn label="Enviar" color="primary" @click="LoginMethod" />
         </q-card-actions>
       </q-card>
     </q-dialog>

@@ -17,7 +17,12 @@ const routes = [
               component: () => import( '@/views/admin/Vacancies.vue' )
             },
         ]
-    }
+    },
+    {
+      path: '/details/:id',
+      name: 'details',
+      component: () => import( '@/views/public/VacanciesDetails.vue')
+  }
 ]
 
 const router=createRouter({

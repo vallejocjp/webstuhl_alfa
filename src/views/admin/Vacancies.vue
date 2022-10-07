@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { useStorePositionsDetails } from '@/store/vacancies/positionsDetails.js'
 import CreateVacancieModal from '@/components/admin/utilities/CreateVacancieModal.vue'
+import Cards from '@/components/public/Cards.vue';
 
     const columns = [
                         {
@@ -157,4 +158,6 @@ import CreateVacancieModal from '@/components/admin/utilities/CreateVacancieModa
     <div v-if="showModalVacancies">
       <CreateVacancieModal :vacancieData="dataVacancie" :showModalVacancies="showModalVacancies" @closeModalVacancies="closeModalVacancies"></CreateVacancieModal>
     </div>
+
+    <Cards></Cards>
   </template>
