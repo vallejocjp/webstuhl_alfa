@@ -1,6 +1,11 @@
 <script setup>
+    import { i18nStore } from '@/store/i18n/i18n'
     import { ref } from 'vue'
+
     const drawer = ref(false)
+    const changeLenguajeI18n = (value)=>{
+      i18nStore().setLocal(value.target.value)
+      }
 </script>
 <template>
     <div>
@@ -68,6 +73,10 @@
         <q-page-container>
             <!-- <button @click="drawer = !drawer">{{drawer?'close':'open'}}</button> -->
             <!-- <q-btn color="primary" icon="arrow" :label="drawer?'close':'open'" @click="drawer = !drawer" /> -->
+            {{$t('example')}}
+            <select @change="changeLenguajeI18n($event)"> <!--v-model="$i18n.locale"-->
+              <option v-for="locale in $i18n.availableLocales">{{ locale }}</option>
+            </select>
           <q-page>
             <RouterView/>
           </q-page>

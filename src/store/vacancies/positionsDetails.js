@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 export const useStorePositionsDetails = defineStore('storePositions', {
   state: () => {
     return { 
-      profession: [
+      profession: [//
         {id: 1, name: 'Bachillerato'},
         {id: 2, name: 'Técnica'},
         {id: 3, name: 'Tecnología'},
@@ -11,43 +11,43 @@ export const useStorePositionsDetails = defineStore('storePositions', {
         {id: 5, name: 'Especialización'},
         {id: 6, name: 'Maestría'},
         {id: 7, name: 'Otro'}],
-      internal_contacts : [
+      internal_contacts : [//
         {id: 1, name: 'Estudiantes'},
         {id: 2, name: 'Staff Academico'},
         {id: 3, name: 'Padres de familia'},
         {id: 4, name: 'Staff Administrativo'},
         {id: 5, name: 'Otros'}
       ],
-      external_contacts : [
+      external_contacts : [//
         {id: 1, name: 'Psicológos'},
         {id: 2, name: 'Psiquiatras'},
         {id: 3, name: 'Neurológos'},
         {id: 4, name: 'Proveedores'},
         {id: 6, name: 'Otros'}
       ],
-      relations_objetives : [
+      relations_objetives : [//
         {id: 1, description: 'Brindar apoyo en procesos acádemicos y psicológicos.'},
         {id: 2, description: 'Brindar capacitaciones.'},
         {id: 3, description: 'Remitir procesos y mantener comunicación con los especialistas externos con el fin de realizar un trabajo interdisciplinario.'},
         {id: 4, description: 'Otros'}
       ],
-      area : [
+      area : [//
         {id: 1, name: 'Financiera'},
         {id: 2, name: 'Compras'},
         {id: 3, name: 'Tecnología'},
         {id: 4, name: 'Gestión humana'}
       ],
-      level : [
+      level : [//
         {id: 1, name: 'Administrativo'},
         {id: 2, name: 'Académico'},
         {id: 3, name: 'Mantenimiento'}
       ],
         positions: [
           {
-            id: 'id1',
+            id: 'id1', //
             denominacion: 'CONSEJERO ESCUELA PREESCOLAR',
-            area:[{id: 1, name: 'Financiera'}],
-            nivel:[{id: 1, name: 'Administrativo'}],
+            area:[{id: 1, name: 'Financiera'}], //
+            nivel:[{id: 1, name: 'Administrativo'}], //
             active:true,
             dateCreation:`${new Date().getFullYear()}/${new Date().getMonth()+1}/${new Date().getDate()}`,
             description: 'Psicólogo especialista en Psicología Educativa, Clinica o Neuro',
@@ -57,7 +57,7 @@ export const useStorePositionsDetails = defineStore('storePositions', {
             aditionalKnowledge:'Experiencia basada en qué',
             competencies:['Capacitado en rescate','Docencia','Maestría gatuna'],
             experience_description: 'años en acompañamientos de procesos educativos',
-            languages: 'Nivel avanzado (C1) de inglés',
+            languages: 'Nivel avanzado (C1) de inglés', //
             laboralConditions:['Buen ambiente laboral','hard work','be happy'],
             purpose: 'Acompañar y realizar planes y procesos de promoción y prevención que permitan fomentar el bienestar y desarrollo socio emocional de los miembros de la comunidad educativa.',
             responsabilities: [
@@ -66,19 +66,19 @@ export const useStorePositionsDetails = defineStore('storePositions', {
               'Acompañar a los directores, profesores y padres de familia en procesos de carácter disciplinario  de los estudiantes.',
               'Liderar capacitaciones, conferencias y actividades de orientación a los miembros de la comunidad educativa enfocados en la promoción y prevención de temas relacionados a la crianza, salud mental y el desarrollo socio-emocional.'
             ],
-            internal_relations_contacts: [
+            internal_relations_contacts: [//
               {id: 1, name: 'Estudiantes'}
             ],
-            internal_relations_objetives: [
+            internal_relations_objetives: [//
               {id: 1, description: 'Brindar apoyo en procesos acádemicos y psicológicos.'}
             ],
-            external_relations_contacts: [
+            external_relations_contacts: [//
               {id: 1, name: 'Psicológos'}
             ],
-            external_relations_objetives: [
+            external_relations_objetives: [//
               {id: 3, description: 'Remitir procesos y mantener comunicación con los especialistas externos con el fin de realizar un trabajo interdisciplinario.'}
             ],
-            academic: [
+            academic: [//
               {id: 4, name: 'Profesional', desc: 'Psicología'}
             ]
            },

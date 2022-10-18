@@ -2,15 +2,29 @@ import App from './App.vue'
 //import './style.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import router from '@/router/router.js'
+import { i18nStore } from '@/store/i18n/i18n'
 import { Quasar } from 'quasar'
+import { installI18n } from './i18n';
+import router from '@/router/router.js'
 import '@quasar/extras/material-icons/material-icons.css'
 import 'quasar/src/css/index.sass'
+// import i18n from '@/i18n/index.js'
 
-createApp(App)
-.use(router)
-.use(createPinia())
-.use(Quasar, {
-    plugins: {}, // import Quasar plugins and add here
-  })
-.mount('#app')
+
+
+const app = createApp(App)
+app.use(router)
+// .use(i18n)
+app.use(createPinia())
+app.use(Quasar, {
+  plugins: {}, // import Quasar plugins and add here
+})
+const i18n = installI18n(app);
+app.mount('#app')
+
+const store = i18nStore()
+
+store.$subscribe((_, state) => {
+  console.info(state);
+  i18n.global.locale = state.locale;
+});
